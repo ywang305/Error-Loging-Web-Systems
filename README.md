@@ -1,6 +1,3 @@
-# Error-Loging-Web-Systems
-
-#	Text	Component
 1	The application shall consist of 3 parts – a REST webservice, a website and a library for logging.	ALL
 2	The web application shall implement strong authentication.	Web
 3	The web application shall support two roles – admin and user.	Web
