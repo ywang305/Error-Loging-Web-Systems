@@ -1,0 +1,93 @@
+﻿@model ICollection<SharedCode.ErrorVM>
+@{
+    ViewBag.Title = "View ErrorLog";
+}
+
+
+
+@if (Model.Count > 0)
+{
+    if (ViewBag.ChartId == 1)
+    {
+        ICollection<DateTime> times = new List<DateTime>();
+        ICollection<int> levels = new List<int>();
+
+        Model.ToList().ForEach(err => { times.Add(err.Time); levels.Add(err.LogLevel); });
+
+        var myChart = new Chart(width: 600, height: 400)
+               .AddTitle("Time-Level")
+               .AddSeries(chartType: "column",
+                   xValue: times, xField: "Time",
+                yValues: levels, yFields: "LogLevel")
+            .Write();
+    }
+    else if (ViewBag.ChartId == 2)
+    {
+        int[] a = new int[10];
+        Model.ToList().ForEach(err => { a[err.LogLevel]++; });
+
+        var myChart = new Chart(width: 600, height: 400)
+               .AddTitle("Level-Distribution")
+               .AddSeries(chartType: "pie",
+                   xValue: new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }, xField: "ErrorMessage",
+                   yValues: a, yFields: "Exception")
+            .Write();
+    }
+    else
+    {
+        <table id="t01">
+            <caption><h3>Display Logs For App :  @ViewBag.AppName </h3></caption>
+            
+            <tr>
+                <th> @Html.ActionLink("Error Id", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new { AppId = ViewBag.AppId, sortOrder = ViewBag.IdSortParam }, new { @class="text-anchor"} ) </th>
+                <th> @Html.ActionLink("Message", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new { AppId = ViewBag.AppId, sortOrder = ViewBag.MsgSortParam }, new { @class = "text-anchor" }) </th>
+                <th> @Html.ActionLink("Time", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new { AppId = ViewBag.AppId, sortOrder = ViewBag.TimeSortParam }, new { @class = "text-anchor" }) </th>
+                <th> @Html.ActionLink("Level", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new { AppId = ViewBag.AppId, sortOrder = ViewBag.LevelSortParam }, new { @class = "text-anchor" }) </th>
+                <th> @Html.ActionLink("Exception", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new { AppId = ViewBag.AppId, sortOrder = ViewBag.ExSortParam }, new { @class = "text-anchor" }) </th>
+                <th>
+                    <button class="button">
+                        @Html.ActionLink(String.Format("clr {0} logs", Model.Count), SharedCode.WebConstants.CLEAR_LOGS,
+                                                new { AppId = ViewBag.AppId },
+                                                null)
+                    </button>
+                </th>
+            </tr>
+            @foreach (var err in Model)
+    {
+                <tr>
+                    <td>@Html.DisplayFor(model => err.ErrorId)</td>
+                    <td>@Html.DisplayFor(model => err.ErrorMessage)</td>
+                    <td>@Html.DisplayFor(model => err.Time)</td>
+                    <td>@Html.DisplayFor(model => err.LogLevel)</td>
+                    <td>@Html.DisplayFor(model => err.ExMessage)</td>
+                    <td>
+                        <button class="button">
+                            @Html.ActionLink("remove one", SharedCode.WebConstants.CLEAR_LOGS,
+                                                new { AppId = ViewBag.AppId, ErrId = err.ErrorId },
+                                                null)
+                        </button>
+                    </td>
+                </tr>
+            }
+        </table>
+
+    }
+}
+else
+{
+    < article > No Records </ article >
+}
+
+
+
+
+
+
+
+
+
+
+
+    
+
+

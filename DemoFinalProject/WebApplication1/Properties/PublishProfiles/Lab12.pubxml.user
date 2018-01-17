@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Syracuse\cse686 Internet Programming\week12\Lab12Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/DatabaseModel.dll">
+      <publishTime>05/06/2017 07:25:59</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/02/2015 08:32:26</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/02/2015 08:32:26</publishTime>
+    </File>
+    <File Include="bin/LoadersAndLogic.exe">
+      <publishTime>05/06/2017 07:25:59</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/23/2012 15:23:58</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/SharedCode.dll">
+      <publishTime>05/06/2017 07:25:58</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/28/2015 03:02:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 03:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 03:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>01/28/2015 03:04:30</publishTime>
+    </File>
+    <File Include="bin/WebApplication1.dll">
+      <publishTime>05/06/2017 07:26:03</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>05/06/2017 04:28:10</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/19/2017 07:20:42</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/20/2017 19:20:37</publishTime>
+    </File>
+    <File Include="Views/Home/AddApp.cshtml">
+      <publishTime>05/04/2017 05:39:53</publishTime>
+    </File>
+    <File Include="Views/Home/AddUser.cshtml">
+      <publishTime>05/03/2017 23:06:47</publishTime>
+    </File>
+    <File Include="Views/Home/AdminPage.cshtml">
+      <publishTime>05/05/2017 15:19:54</publishTime>
+    </File>
+    <File Include="Views/Home/EditApp.cshtml">
+      <publishTime>05/04/2017 05:40:51</publishTime>
+    </File>
+    <File Include="Views/Home/EditUser.cshtml">
+      <publishTime>05/05/2017 06:43:28</publishTime>
+    </File>
+    <File Include="Views/Home/Error.cshtml">
+      <publishTime>04/20/2017 19:32:50</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/20/2017 21:14:39</publishTime>
+    </File>
+    <File Include="Views/Home/Register.cshtml">
+      <publishTime>04/20/2017 20:53:17</publishTime>
+    </File>
+    <File Include="Views/Home/UserPage.cshtml">
+      <publishTime>05/05/2017 09:13:32</publishTime>
+    </File>
+    <File Include="Views/Home/ViewAllApps.cshtml">
+      <publishTime>05/05/2017 13:37:12</publishTime>
+    </File>
+    <File Include="Views/Home/ViewApps.cshtml">
+      <publishTime>05/06/2017 05:54:56</publishTime>
+    </File>
+    <File Include="Views/Home/ViewErrorLog.cshtml">
+      <publishTime>05/06/2017 06:28:51</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/06/2017 07:18:29</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>02/15/2017 01:38:27</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/15/2017 02:05:33</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/20/2017 19:40:21</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\DatabaseModel.dll.config
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\DatabaseModel.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\DatabaseModel.pdb
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\EntityFramework.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\EntityFramework.SqlServer.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\SharedCode.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\SharedCode.pdb
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\EntityFramework.xml
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\EntityFramework.SqlServer.xml
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\obj\Debug\DatabaseModel.csprojResolveAssemblyReference.cache
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\obj\Debug\DatabaseModel.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\obj\Debug\DatabaseModel.pdb

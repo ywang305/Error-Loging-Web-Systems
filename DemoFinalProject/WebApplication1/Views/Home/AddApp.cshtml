@@ -1,0 +1,24 @@
+﻿@model SharedCode.ApplicationVM
+@{
+    ViewBag.Title = "AddApp";
+}
+
+<div>
+    
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <table>
+            <caption><h3> add new app</h3></caption>
+            <tbody>
+                <tr><td>Application Name:</td>  <td>@Html.TextBoxFor(x => x.AppName )</td></tr>
+                <tr><td>IsActive? :</td>  <td>@Html.EditorFor(x => x.IsActive )</td></tr>
+            </tbody>
+        </table>
+        <br />
+        <input type="submit" value="add" />
+    }
+
+</div>
+

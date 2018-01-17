@@ -1,0 +1,27 @@
+﻿@model SharedCode.LoginInfoVM
+    @{
+        ViewBag.Title = "AddUser";
+    }
+
+<div>
+    <h4> add new user</h4>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <table>
+            <tbody>
+                <tr><td>FirstName</td>  <td>@Html.TextBoxFor(x => x.OnePerson.FirstName)</td></tr>
+                <tr><td>LastName</td>  <td>@Html.TextBoxFor(x => x.OnePerson.LastName)</td></tr>
+                <tr><td>Password</td>  <td>@Html.TextBoxFor(x =>x.Password )</td></tr>
+                <tr><td>Email</td>  <td>@Html.TextBoxFor(x => x.OnePerson.Email)</td></tr>
+                <tr><td>Role</td>  <td>@Html.EditorFor(x => x.Role)</td></tr>
+            </tbody>
+        </table>
+        <br />
+        <input class ="button" type="submit" value="add" />
+            
+    }
+
+</div>
+

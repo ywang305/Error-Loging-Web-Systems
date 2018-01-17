@@ -1,0 +1,5 @@
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\ErrorLoggerModel.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\bin\Debug\ErrorLoggerModel.pdb
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\obj\Debug\DatabaseEntityModel.csprojResolveAssemblyReference.cache
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\obj\Debug\ErrorLoggerModel.dll
+D:\Syracuse\cse686 Internet Programming\InClassDemo\DemoFinalProject\ErrorLoggerModel\obj\Debug\ErrorLoggerModel.pdb

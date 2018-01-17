@@ -1,0 +1,151 @@
+﻿body {
+    width:100%;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+}
+
+
+.text-anchor:link { color: lawngreen }
+.text-anchor:visited { color: lawngreen }
+
+.text-danger {
+    color: red;
+}
+
+.body-content{
+    position:relative;
+    background-color: lightgoldenrodyellow;
+    color:Black;
+    font-family:'Times New Roman', Times, serif;
+    text-align:left; 
+    padding: 50px;
+    width: auto;
+    height:auto;
+}
+
+.button {
+    background-color: lightgrey;
+    color: black;
+    border-radius: 12px;
+}
+
+.button:hover {
+    background-color: #e7e7e7;
+}
+
+
+#MB.Menubar {
+    padding : 5px;
+    background-color:rgba(70,145,149,0.8);
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    text-align:center;
+    position:relative;
+    top:0;
+    height:auto;
+    width:100%;
+    z-index:999;
+}
+
+#MB ul li{
+    display:inline;
+    text-transform:uppercase;
+    font-size: 14px;
+    border:0;
+    width: 10px;
+    height:40px;
+    margin-right:20px;
+}
+
+#MB ul li a{
+    text-decoration: none;
+    color:white;
+    padding: 5px 5px;
+}
+
+#MB ul li a:hover {
+    background-color: white;
+    color: rgb(70,145,14);
+    border-radius: 8px;
+}
+
+#display-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+}
+
+table {
+    width: 90%;
+    border-radius: 5px;
+    border-collapse: collapse;
+    color: black;
+    table-layout:fixed;
+}
+
+
+
+table, th, td {
+    border-collapse: separate;
+}
+
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+
+table th{
+    padding: 5px;
+    color: white;
+    background-color: black;
+}
+
+table#t01 td{
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    max-width: 600px;
+    overflow-x:scroll;
+    white-space: nowrap;
+}
+
+table#t02 tr:nth-child(4n+0) {
+    background-color: #d3ff9b;
+}
+
+table#t02 tr:nth-child(4n+2) {
+    background-color: #f5ffb2;
+}
+
+
+
+table#t02 td{
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    max-width: 600px;
+    overflow-x:scroll;
+    white-space: nowrap;
+}
+
+
+div.column1 {
+    width: 30%;
+    float: left;
+    padding: 10px, 10px
+}
+div.column2 {
+    width: 70%;
+    float: left;
+}
+
+div.graph {
+    max-width:400px;
+    max-height: 400px;
+}

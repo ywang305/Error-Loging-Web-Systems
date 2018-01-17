@@ -1,0 +1,29 @@
+﻿@model ICollection<SharedCode.ApplicationVM>
+@{
+    ViewBag.Title = "ViewApps";
+}
+
+<table id="t01">
+    <caption><h3>Display Your Applications</h3></caption>
+    <tr>
+        <th>@Html.DisplayNameFor(p => p.FirstOrDefault().ApplicationId )</th>
+        <th>@Html.DisplayNameFor(p => p.FirstOrDefault().AppName )</th>
+        <th>@Html.DisplayNameFor(p => p.FirstOrDefault().IsActive)</th>
+    </tr>
+    @foreach (var app in Model)
+    {
+        <tr>
+            <td>  @app.ApplicationId </td>
+            <td>  @app.AppName</td>
+            <td>  @app.IsActive</td>
+            <td> <button class="button">@Html.ActionLink("Log-List", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new SharedCode.LogOrderSearchVM() { AppId= app.ApplicationId, chartId=null }, null)</button>
+                <button class="button">@Html.ActionLink("Chart-1", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new SharedCode.LogOrderSearchVM() { AppId = app.ApplicationId, chartId=1 }, null)</button>
+                <button class="button">@Html.ActionLink("Chart-2", SharedCode.WebConstants.VIEW_ERRORLOG_PAGE, new SharedCode.LogOrderSearchVM() { AppId = app.ApplicationId, chartId = 2 }, null)</button>
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+

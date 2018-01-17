@@ -1,0 +1,39 @@
+﻿@model SharedCode.LoginInfoVM
+
+@{
+    ViewBag.Title = "EditUser";
+}
+<h4> Edit User </h4>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <hr />
+       
+    @Html.HiddenFor( p=>p.LoginId )
+    @Html.HiddenFor( p=>p.OnePerson.PersonId )
+    @Html.HiddenFor( p=>p.LoginTime )
+
+    <div class="text-danger"> @ViewBag.UserRoleLimit </div>
+    <table>
+        <caption>User's Login ID: @Html.DisplayFor(p => p.LoginId)</caption>
+        <tbody>
+            <tr><td>First Name   :</td>  <td>@Html.TextBoxFor(p => p.OnePerson.FirstName)</td></tr>
+            <tr><td>Last Name    :</td>  <td>@Html.TextBoxFor(p => p.OnePerson.LastName)</td></tr>
+            <tr><td>Password     :</td>  <td>@Html.PasswordFor(p => p.Password)</td></tr>
+            <tr><td>Email        :</td>  <td>@Html.TextBoxFor(p => p.OnePerson.Email)</td></tr>
+            @if ( ViewBag.myRole >= (int)SharedCode.Security.RoleEnum.Admin)
+            {
+                <tr><td>IsLive?      :</td>  <td>@Html.EditorFor(p => p.IsLive) </td></tr>
+                <tr><td>Role    :</td>  <td>@Html.TextBoxFor(p => p.Role)</td></tr>
+            }
+            else
+            {
+                @Html.HiddenFor(p => p.IsLive)
+                @Html.HiddenFor(p=>p.Role )
+            }
+        </tbody>     
+    </table>
+    <input class="button" type="submit" value="Save" />
+}
+

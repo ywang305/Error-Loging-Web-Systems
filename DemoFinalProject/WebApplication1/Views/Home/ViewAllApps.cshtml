@@ -1,0 +1,41 @@
+﻿@model ICollection<SharedCode.ApplicationVM >
+@{
+    ViewBag.Title = "View/Edit all Apps by admin";
+}
+
+<div>
+    <button class="button"> @Html.ActionLink(SharedCode.WebConstants.ADD_APP_PAGE, SharedCode.WebConstants.ADD_APP_PAGE, SharedCode.WebConstants.HOME_CONTROLLER) </button>
+</div>
+<hr />
+<form>
+    @foreach (var app in Model)
+    {
+        <fieldset>
+            <legend>@Html.DisplayNameFor(a => a.FirstOrDefault().ApplicationId) :  @app.ApplicationId</legend>
+            <div class="column1">
+                <table>
+                    <tr><td>@Html.DisplayNameFor(a => a.FirstOrDefault().AppName) : </td> <td>@app.AppName</td></tr>
+                    <tr><td>@Html.DisplayNameFor(a => a.FirstOrDefault().IsActive) : </td><td>@app.IsActive</td></tr>
+                </table>
+                <button class="button"> @Html.ActionLink("Edit App", SharedCode.WebConstants.EDIT_APP_PAGE, new { appId = app.ApplicationId }) </button>
+            </div>
+            <div class="column2">
+                <table>
+                    <tr>
+                        <th> Person Id</th> <th>FirstName</th> <th> LastName </th>
+                    </tr>
+                    @foreach (var per in app.Persons)
+                    {
+                        <tr>
+                            <td> @per.PersonId </td>
+                            <td> @per.FirstName </td>
+                            <td> @per.LastName </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </fieldset>
+    }
+</form>
+
+

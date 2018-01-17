@@ -1,0 +1,29 @@
+﻿@model SharedCode.LoginInfoVM
+@using SharedCode
+@{
+    ViewBag.Title = "Login";
+}
+
+@ViewBag.Greeting 
+<br />
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <h4> Please Login:</h4>
+        <hr />
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+        <table>
+            <tbody>
+                <tr><td>First Name:</td>  <td>@Html.TextBoxFor(x => x.OnePerson.FirstName )</td></tr>
+                <tr><td>Password:</td>  <td>@Html.PasswordFor( x => x.Password )</td></tr>
+                <tr><td>Email:</td>  <td>@Html.TextBoxFor( x => x.OnePerson.Email)</td></tr>
+            </tbody>
+        </table>
+        <br />
+        <input class="button" type="submit" value="login" />
+        <br />
+        <span>  If you are not registered, register first!</span>
+    }

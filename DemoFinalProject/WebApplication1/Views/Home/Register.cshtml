@@ -1,0 +1,25 @@
+﻿@model SharedCode.LoginInfoVM
+@{
+    ViewBag.Title = "Register";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+    <table>
+        <caption> <h4> Register:</h4></caption>
+
+        <tbody>  
+            <tr><td>First Name   :</td>  <td>@Html.TextBoxFor(p => p.OnePerson.FirstName)</td></tr>
+            <tr><td>Last Name    :</td>  <td>@Html.TextBoxFor(p => p.OnePerson.LastName)</td></tr>
+            <tr><td>Password     :</td>  <td>@Html.PasswordFor( p => p.Password )</td></tr>
+            <tr><td>Email    :</td>  <td>@Html.TextBoxFor(p => p.OnePerson.Email)</td></tr>         
+        </tbody>
+    </table>
+
+    <input type="submit" value="Register" />
+}

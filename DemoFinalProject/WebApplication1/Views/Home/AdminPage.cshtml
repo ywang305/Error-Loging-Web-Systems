@@ -1,0 +1,59 @@
+﻿@model ICollection<SharedCode.LoginInfoVM >
+
+@{
+    ViewBag.Title = "AdminPage";
+    
+}
+
+<h3>AdminPage</h3>
+
+
+<div>
+    <table>
+        <tr>
+            <td><button class="button"> @Html.ActionLink(SharedCode.WebConstants.ADD_USER_PAGE, SharedCode.WebConstants.ADD_USER_PAGE, SharedCode.WebConstants.HOME_CONTROLLER) </button></td>
+        </tr> 
+    </table>
+
+    <table id="t02">
+        <caption><h3>Users' information</h3></caption>
+        <tr>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().LoginId)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().OnePerson.PersonId)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().OnePerson.FirstName)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().OnePerson.LastName)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().Password)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().OnePerson.Email) </th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().Role)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().LoginTime)</th>
+            <th>@Html.DisplayNameFor(p => p.FirstOrDefault().IsLive)</th>
+            <th><button class="button"> @Html.ActionLink("View/Edit All Apps", SharedCode.WebConstants.VIEW_ALLAPPS_PAGE, SharedCode.WebConstants.HOME_CONTROLLER) </button></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @item.LoginId</td>
+                <td> @item.OnePerson.PersonId</td>
+                <td> @item.OnePerson.FirstName</td>
+                <td> @item.OnePerson.LastName</td>
+                <td> @item.Password</td>
+                <td> @item.OnePerson.Email</td>
+                <td> @item.Role</td>
+                <td> @item.LoginTime </td>
+                <td> @item.IsLive </td>
+                <td>  <div> <button class="button">@Html.ActionLink("Edit User", SharedCode.WebConstants.EDIT_USER_PAGE, SharedCode.WebConstants.HOME_CONTROLLER, new { PersonId = item.OnePerson.PersonId }, null)</button></div>
+                       <div><button class="button"> @Html.ActionLink("View App&Log", SharedCode.WebConstants.VIEW_APPS_PAGE, new { PersonId = item.OnePerson.PersonId }, null) </button></div>
+                </td>
+            </tr>
+           
+        }
+    </table>
+
+
+</div>
+        
+        
+        
+
+

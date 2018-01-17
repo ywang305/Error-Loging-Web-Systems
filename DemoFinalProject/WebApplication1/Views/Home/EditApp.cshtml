@@ -1,0 +1,27 @@
+﻿@model SharedCode.ApplicationPersonIdFlatVM
+@{
+    ViewBag.Title = "EditApp";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    
+    @Html.HiddenFor(model => model.ApplicationId)
+    <table>
+        <caption> <h4> App Name, IsActive? Assign to user </h4></caption>
+
+        <tbody>
+            <tr><td>App Id   :</td>  <td>@Html.DisplayFor(model=>model.ApplicationId )</td></tr>
+            <tr><td>App Name? :</td>  <td>@Html.TextBoxFor(model=>model.AppName )</td></tr>
+            <tr><td>IsActive? :</td>  <td>@Html.EditorFor(model=>model.IsActive)</td></tr>
+            <tr><td>New Person Id? :</td>  <td>@Html.EditorFor(model=>model.PersonId )</td></tr>
+        </tbody>      
+    </table>
+
+    <input class="button" type="submit" value="Update" />
+}
+
+

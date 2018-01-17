@@ -1,0 +1,38 @@
+﻿@model SharedCode.LoginInfoVM
+@{
+    ViewBag.Title = "UserPage";
+}
+
+<h4>UserPage</h4>
+
+<table id="t02">
+    <caption><h3>Users' information</h3></caption>
+    <tr>
+        <th>@Html.DisplayNameFor(p => p.LoginId)</th>
+        <th>@Html.DisplayNameFor(p => p.OnePerson.PersonId)</th>
+        <th>@Html.DisplayNameFor(p => p.OnePerson.FirstName)</th>
+        <th>@Html.DisplayNameFor(p => p.OnePerson.LastName)</th>
+        <th>@Html.DisplayNameFor(p => p.Password)</th>
+        <th>@Html.DisplayNameFor(p => p.OnePerson.Email) </th>
+        <th>@Html.DisplayNameFor(p => p.Role)</th>
+        <th>@Html.DisplayNameFor(p => p.LoginTime)</th>
+        <th>@Html.DisplayNameFor(p => p.IsLive)</th>
+    </tr>
+    <tr>
+        <td>@Html.DisplayFor(p => p.LoginId) </td>
+        <td>@Html.DisplayFor(p => p.OnePerson.PersonId) </td>
+        <td>@Html.DisplayFor(p => p.OnePerson.FirstName) </td>
+        <td>@Html.DisplayFor(p => p.OnePerson.LastName) </td>
+        <td>@Html.DisplayFor(p => p.Password) </td>
+        <td>@Html.DisplayFor(p => p.OnePerson.Email) </td>
+        <td>@Html.DisplayFor(p => p.Role) </td>
+        <td>@Html.DisplayFor(p => p.LoginTime) </td>
+        <td>@Html.DisplayFor(p => p.IsLive) </td>
+    </tr>
+    <tr>
+        <td> <button class="button">@Html.ActionLink("Edit User", SharedCode.WebConstants.EDIT_USER_PAGE, SharedCode.WebConstants.HOME_CONTROLLER, new { PersonId = Model.OnePerson.PersonId }, null)</button> </td>
+        
+        <td> <button class="button"> @Html.ActionLink("My Apps", SharedCode.WebConstants.VIEW_APPS_PAGE, new { PersonId = Model.OnePerson.PersonId }, null) </button></td>
+    </tr>
+
+</table>

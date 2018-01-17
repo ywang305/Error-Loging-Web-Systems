@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    
+</head>
+<body>
+    @using SharedCode
+    <div id="MB" class="Menubar">
+        <ul>
+            <li>@Html.ActionLink(WebConstants.HOME_PAGE, WebConstants.HOME_PAGE, WebConstants.HOME_CONTROLLER )</li>
+            <li>@Html.ActionLink(WebConstants.REGISTER_PAGE, WebConstants.REGISTER_PAGE, WebConstants.HOME_CONTROLLER)</li>
+            <li>@Html.ActionLink("User_Detail", WebConstants.HOME_USER_PAGE, WebConstants.HOME_CONTROLLER)</li>
+            <li>@Html.ActionLink("Admin_Detail", WebConstants.HOME_ADMIN_PAGE, WebConstants.HOME_CONTROLLER)</li>
+            <li>@Html.ActionLink("Logoff", WebConstants.LOG_OFF, WebConstants.HOME_CONTROLLER)</li>
+        </ul>
+    </div>
+    <div class="body-content">
+        @RenderBody()
+    </div>
+</body>
+</html>
