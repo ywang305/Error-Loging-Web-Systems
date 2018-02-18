@@ -32,4 +32,6 @@
   -	Your application shall have a look and feel of a polished final product.	Web
     * Extra work on UI.	Web
 ##
-## ![architecerrlog](https://user-images.githubusercontent.com/24782000/36354732-bd5a0eda-14a6-11e8-82fe-617d1c15ebf5.PNG)
+- ![architecerrlog](https://user-images.githubusercontent.com/24782000/36354732-bd5a0eda-14a6-11e8-82fe-617d1c15ebf5.PNG)
+- ![appofhost](https://user-images.githubusercontent.com/24782000/36354825-e76a0d50-14a7-11e8-9a1b-547714de0dd5.PNG)
+- ![viewlogger](https://user-images.githubusercontent.com/24782000/36354826-e999e6e0-14a7-11e8-9436-1453d9b605d0.PNG)
